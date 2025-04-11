@@ -2,7 +2,7 @@
 <html lang="en" data-accent-color="grass" data-content_root="./">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>exasol-developer-documentation</title><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Getting Started" href="getting_started.html" /><script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Getting Started - exasol-developer-documentation</title><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Data Ingestion" href="data_ingestion.html" /><link rel="prev" title="Developer Documentation" href="index.html" /><script>
     function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
     setColorMode(localStorage._theme||"auto");
   </script><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=397bb51e" />
@@ -11,13 +11,13 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link media="print" rel="stylesheet" type="text/css" href="_static/print.css?v=20ff2c19" />
     
-    <meta property="og:type" content="website"/><meta property="og:title" content="Developer Documentation"/>
+    <meta property="og:type" content="website"/><meta property="og:title" content="Getting Started"/>
 <meta name="twitter:card" content="summary"/>
   </head>
 <body><div class="sy-head">
   <div class="sy-head-blur"></div>
   <div class="sy-head-inner sy-container mx-auto">
-    <a class="sy-head-brand" href="#">
+    <a class="sy-head-brand" href="index.html">
       <img class="light-logo" src="_static/light-exasol-logo.svg" alt="exasol-developer-documentation" height="28" loading="lazy" />
       <img class="dark-logo" src="_static/dark-exasol-logo.svg" alt="exasol-developer-documentation" height="28" loading="lazy" />
       <strong>exasol-developer-documentation</strong>
@@ -33,7 +33,7 @@
       <span class="hidden md:inline">main</span>
       <i class="i-lucide chevron-down"></i>
     </button>
-    <div class="nav-versions-choices"><ul><li><a href="index.html">main</a></li></ul></div>
+    <div class="nav-versions-choices"><ul><li><a href="getting_started.html">main</a></li></ul></div>
   </div><div class="sy-head-socials">
   <a href="https://github.com/exasol/developer-documentation" aria-label="GitHub">
     <iconify-icon icon="simple-icons:github"></iconify-icon>
@@ -58,8 +58,8 @@ data-aria-dark="Switch to auto color mode">
   <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
     <div class="sy-lside-inner md:sticky">
       <div class="sy-scrollbar p-6">
-        <div class="globaltoc" data-expand-depth="0"><ul>
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+        <div class="globaltoc" data-expand-depth="0"><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_ingestion.html">Data Ingestion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distributed_python/index.html">Distributed Python (UDFs)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="distributed_python/intro.html">Intro to UDFs</a></li>
@@ -87,7 +87,13 @@ data-aria-dark="Switch to auto color mode">
     <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
       <i class="i-lucide close"></i>
     </button>
-    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#setting-up-the-db">Setting up the db</a></li>
+<li><a class="reference internal" href="#installing-pyexasol">Installing pyexasol</a></li>
+<li><a class="reference internal" href="#connecting-to-the-db">Connecting to the db</a></li>
+<li><a class="reference internal" href="#executing-sql">Executing SQL</a></li>
+</ul>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
   </aside>
   <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
   <main class="sy-main w-full max-sm:max-w-full print:pt-6"><div class="sy-breadcrumbs" role="navigation">
@@ -98,11 +104,11 @@ data-aria-dark="Switch to auto color mode">
       </button>
     </div>
     <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="#"><span itemprop="name">exasol-developer-documentation</span></a>
+        <a itemprop="item" href="index.html"><span itemprop="name">exasol-developer-documentation</span></a>
         <span>/</span>
         <meta itemprop="position" content="1" />
       </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <strong itemprop="name">Developer Documentation</strong>
+        <strong itemprop="name">Getting Started</strong>
         <meta itemprop="position" content="2" />
       </li></ol>
     <div class="xl:hidden ml-1">
@@ -115,21 +121,71 @@ data-aria-dark="Switch to auto color mode">
 </div><div class="flex flex-col break-words justify-between">
       <div class="min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
         <article class="yue" role="main">
-          <section id="developer-documentation">
-<h1>Developer Documentation<a class="headerlink" href="#developer-documentation" title="Link to this heading">¶</a></h1>
-<p>Documentation and resources for data scientists and programmatic users to perform analytics with Exasol and to build applications on top.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_ingestion.html">Data Ingestion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distributed_python/index.html">Distributed Python (UDFs)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="environments.html">Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="integrations.html">Integrations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-question" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg> FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changes/changelog.html">Changes</a></li>
+          <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h1>
+<p>There are three ways to get started with Exasol:</p>
+<ul class="simple">
+<li><p>Download the <a class="reference external" href="https://www.exasol.com/free-signup-community-edition/">community
+edition</a></p></li>
+<li><p>Use the <a class="reference external" href="https://github.com/exasol/docker-db">docker version</a></p></li>
+<li><p>Signup for a free <a class="reference external" href="https://cloud.exasol.com/signup">SaaS trial</a></p></li>
 </ul>
+<p>In the following we are going to use the SaaS version.</p>
+<section id="setting-up-the-db">
+<h2>Setting up the db<a class="headerlink" href="#setting-up-the-db" title="Link to this heading">¶</a></h2>
+<p>Our <a class="reference external" href="https://docs.exasol.com/saas/get_started/saas_first_steps.htm">main
+documentation</a>
+shows you how to create a SaaS account and setup your first database and
+cluster.</p>
+</section>
+<section id="installing-pyexasol">
+<h2>Installing pyexasol<a class="headerlink" href="#installing-pyexasol" title="Link to this heading">¶</a></h2>
+<p>Once your database is up and running you can connect via any client.
+From Python we use <a class="reference external" href="https://github.com/exasol/pyexasol">PyExasol</a>. It
+can be easily installed via</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">pip</span> <span class="n">install</span> <span class="n">pyexasol</span><span class="p">[</span><span class="n">pandas</span><span class="p">]</span>
+</span></pre></div>
 </div>
+</section>
+<section id="connecting-to-the-db">
+<h2>Connecting to the db<a class="headerlink" href="#connecting-to-the-db" title="Link to this heading">¶</a></h2>
+<p>Connecting to an Exasol database is performed via:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span><span class="w"> </span><span class="nn">pyexasol</span>
+</span><span data-line="2">
+</span><span data-line="3"><span class="n">C</span> <span class="o">=</span> <span class="n">pyexasol</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="o">=</span><span class="s1">&#39;&lt;host:port&gt;&#39;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s1">&#39;sys&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;exasol&#39;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>It is slightly different when connecting to a SaaS database as we need a
+<a class="reference external" href="https://docs.exasol.com/saas/administration/access_mngt/access_token.htm">personal access
+token</a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span><span class="w"> </span><span class="nn">pyexasol</span>
+</span><span data-line="2">
+</span><span data-line="3"><span class="n">C</span> <span class="o">=</span> <span class="n">pyexasol</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="o">=</span><span class="s1">&#39;&lt;host:port&gt;&#39;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s1">&#39;sys&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;&lt;token&gt;&#39;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>Finally you can also wrap all credentials into a <a class="reference external" href="https://exasol.github.io/pyexasol/master/user_guide/local_config.html">local config
+file</a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">C</span> <span class="o">=</span> <span class="n">pyexasol</span><span class="o">.</span><span class="n">connect_local_config</span><span class="p">(</span><span class="s1">&#39;my_exasol&#39;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</section>
+<section id="executing-sql">
+<h2>Executing SQL<a class="headerlink" href="#executing-sql" title="Link to this heading">¶</a></h2>
+<p>Running your first query is pretty straightforward:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">stmt</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM EXA_ALL_USERS&quot;</span><span class="p">)</span>
+</span><span data-line="2">
+</span><span data-line="3"><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">stmt</span><span class="p">:</span>
+</span><span data-line="4">    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>It also allows you to load resultsets into a pandas dataframe:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">C</span> <span class="o">=</span> <span class="n">pyexasol</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="o">=</span><span class="s1">&#39;&lt;host:port&gt;&#39;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s1">&#39;sys&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;exasol&#39;</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span data-line="2">
+</span><span data-line="3"><span class="n">df</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">export_to_pandas</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM EXA_ALL_USERS&quot;</span><span class="p">)</span>
+</span><span data-line="4"><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</span></pre></div>
+</div>
+</section>
 </section>
 
         </article><button class="back-to-top" type="button">
@@ -137,11 +193,17 @@ data-aria-dark="Switch to auto color mode">
     <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
   </svg>
   <span>Back to top</span>
-</button><div class="navigation flex print:hidden"><div class="navigation-next">
-    <a href="getting_started.html">
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="index.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span><div class="title">Home</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="data_ingestion.html">
       <div class="page-info">
         <span>Next</span>
-        <div class="title">Getting Started</div>
+        <div class="title">Data Ingestion</div>
       </div>
       <i class="i-lucide chevron-right"></i>
     </a>
